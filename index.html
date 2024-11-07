@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Karla:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form class="contact-form">
+
+            <h3>Contact Us</h3>
+
+            <div class="contact-form-top">
+
+                <div class="input-box-1">
+                    <label for="firstName" class="contact-form-label">First Name <span>*</span></label>
+                    <input type="text" class="contact-form-input" id="firstName">
+                    <p class="message-error">This field is required</p>
+                </div>
+                <div class="input-box-2">
+                    <label for="lastName" class="contact-form-label">Last Name <span>*</span></label>
+                    <input type="text" class="contact-form-input" id="lastName">
+                    <p class="message-error">This field is required</p>
+                </div>
+                <div class="input-box-3">
+                    <label for="email" class="contact-form-label">Email Address <span>*</span></label>
+                    <input type="email" class="contact-form-input" id="email">
+                    <p class="email-msg-error">test</p>
+                </div>
+            </div>
+
+            <div class="contact-form-middle">
+                <div class="input-box-4">
+                    <input type="radio" id="radio-1" class="contact-form-input" name="inquiryType" value="general">
+                    <label for="radio-1">General Enquiry</label>
+                </div>
+                <div class="input-box-5">
+                    <input type="radio" id="radio-2" class="contact-form-input" name="inquiryType" value="support">
+                    <label for="radio-2">Support Request</label>
+                </div>
+                <p class="error-type-msg">test</p>
+            </div>
+
+            <div class="contact-form-bottom">
+                <div class="input-box-6">
+                    <label for="msg" class="contact-form-label">Message <span>*</span></label>
+                    <textarea id="msg" class="contact-form-textarea" name="message"></textarea>
+                    <p class="message error">test</p>
+                </div>
+                <div class="input-box-7">
+                    <input type="checkbox" id="consent" name="consent">
+                    <label for="consent">I consent to being contacted by the team <span>*</span></label>
+                    <p class="message-error-check">test</p>
+                </div>
+            </div>
+            <button class="btn">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <div class="msg-status">
+        <div class="status-box">
+            <img src="./images/icon-success-check.svg" alt="succes-icon">
+            <span>Message Sent!</span>
+        </div>
+        
+        <p>dzięki za formularz byku</p>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

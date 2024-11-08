@@ -34,33 +34,34 @@
                 <div class="input-box-3">
                     <label for="email" class="contact-form-label">Email Address <span>*</span></label>
                     <input type="email" class="contact-form-input" id="email">
-                    <p class="email-msg-error">test</p>
+                    <p class="email-msg-error">Please enter a valid email adress</p>
                 </div>
             </div>
 
             <div class="contact-form-middle">
-                <div class="input-box-4">
+                <p>Querry Type <span>*</span></p>
+                <div class="query-box input-box-4">
                     <input type="radio" id="radio-1" class="contact-form-input" name="inquiryType" value="general">
                     <label for="radio-1">General Enquiry</label>
                 </div>
-                <div class="input-box-5">
+                <div class="query-box input-box-5">
                     <input type="radio" id="radio-2" class="contact-form-input" name="inquiryType" value="support">
                     <label for="radio-2">Support Request</label>
                 </div>
-                <p class="error-type-msg">test</p>
+                <p class="query-error-msg">Please select a query type</p>
             </div>
 
             <div class="contact-form-bottom">
                 <div class="input-box-6">
                     <label for="msg" class="contact-form-label">Message <span>*</span></label>
                     <textarea id="msg" class="contact-form-textarea" name="message"></textarea>
-                    <p class="message error">test</p>
+                    <p class="message-error">This field is required</p>
                 </div>
                 <div class="input-box-7">
                     <input type="checkbox" id="consent" name="consent">
                     <label for="consent">I consent to being contacted by the team <span>*</span></label>
-                    <p class="message-error-check">test</p>
                 </div>
+                <p class="message-error-check">To submit this form, please consent to being contacted</p>
             </div>
             <button class="btn">
                 Submit

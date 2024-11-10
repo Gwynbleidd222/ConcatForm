@@ -35,13 +35,17 @@ body {
 	.contact-form {
 		padding: 2rem;
 
+		
 		h3 {
 			font-size: 3rem;
 		}
-
+		
 		.contact-form-top {
 			padding-top: 1rem;
-
+			
+			input.error {
+				border-color: $red;
+			}
 			.message-error {
 				margin: 1rem 0 2rem;
 				color: $red;
@@ -68,6 +72,8 @@ body {
 					outline: $darkGreen;
 				}
 			}
+
+			
 			.input-box-3 {
 				.email-msg-error {
 					margin: 1rem 0 2rem;
@@ -117,6 +123,10 @@ body {
 					font-size: 1.4rem;
 				}
 
+				textarea.error {
+					border-color: $red;
+				}
+
 				.contact-form-textarea {
 					margin-top: 1rem;
 					padding: 1rem;
@@ -143,41 +153,39 @@ body {
 				}
 			}
 
-            .input-box-7 {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                text-align: left;
+			.input-box-7 {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				text-align: left;
 
-                
+				label {
+					padding-left: 1rem;
+					font-size: 1.4rem;
+				}
+			}
 
-                label {
-                    padding-left: 1rem;
-                    font-size: 1.4rem;
-                }
-            }
-
-            .message-error-check {
-                margin: 1rem 0 2rem;
-                color: $red;
-                font-size: 1.4rem;
-            }
+			.message-error-check {
+				margin: 1rem 0 2rem;
+				color: $red;
+				font-size: 1.4rem;
+			}
 		}
 
-        .btn {
-            padding: 2rem;
-            width: 100%;
-            background-color: $darkGreen;
-            color: $white;
-            letter-spacing: 1px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+		.btn {
+			padding: 2rem;
+			width: 100%;
+			background-color: $darkGreen;
+			color: $white;
+			letter-spacing: 1px;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background-color 0.3s;
 
-            &:hover {
-                background-color: $darkGray;
-            }
-        }
+			&:hover {
+				background-color: $darkGray;
+			}
+		}
 	}
 }
 

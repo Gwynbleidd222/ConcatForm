@@ -38,6 +38,9 @@ body {
 .wrapper .contact-form .contact-form-top {
   padding-top: 1rem;
 }
+.wrapper .contact-form .contact-form-top input.error {
+  border-color: #D73C3C;
+}
 .wrapper .contact-form .contact-form-top .message-error {
   margin: 1rem 0 2rem;
   color: #D73C3C;
@@ -95,6 +98,9 @@ body {
 }
 .wrapper .contact-form .contact-form-bottom .input-box-6 .contact-form-label {
   font-size: 1.4rem;
+}
+.wrapper .contact-form .contact-form-bottom .input-box-6 textarea.error {
+  border-color: #D73C3C;
 }
 .wrapper .contact-form .contact-form-bottom .input-box-6 .contact-form-textarea {
   margin-top: 1rem;

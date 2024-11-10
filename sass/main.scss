@@ -35,14 +35,13 @@ body {
 	.contact-form {
 		padding: 2rem;
 
-		
 		h3 {
 			font-size: 3rem;
 		}
-		
+
 		.contact-form-top {
 			padding-top: 1rem;
-			
+
 			input.error {
 				border-color: $red;
 			}
@@ -73,7 +72,6 @@ body {
 				}
 			}
 
-			
 			.input-box-3 {
 				.email-msg-error {
 					margin: 1rem 0 2rem;
@@ -110,6 +108,9 @@ body {
 
 				input {
 					margin: 0 1rem;
+					&:checked {
+						background-color: $green;
+					}
 				}
 			}
 		}

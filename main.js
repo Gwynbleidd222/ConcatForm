@@ -76,6 +76,8 @@ const checkInputs = () => {
 		const queryErrorMsg = document.querySelector('.query-error-msg');
 		if (queryErrorMsg) {
 			queryErrorMsg.innerText = 'Please select an enquiry type';
+            isValid = false
+
 		}
 	} else {
 		const queryErrorMsg = document.querySelector('.query-error-msg');
@@ -95,6 +97,7 @@ const checkInputs = () => {
 		const consentErrorMsg = document.querySelector('.message-error-check');
 		if (consentErrorMsg) {
 			consentErrorMsg.innerText = 'You must consent to be contacted';
+            isValid = false
 		}
 	} else {
 		const consentErrorMsg = document.querySelector('.message-error-check');

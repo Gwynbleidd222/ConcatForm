@@ -92,6 +92,9 @@ body {
 .wrapper .contact-form .contact-form-middle .query-box input {
   margin: 0 1rem;
 }
+.wrapper .contact-form .contact-form-middle .query-box input:checked {
+  background-color: #E0F1E8;
+}
 .wrapper .contact-form .contact-form-bottom .input-box-6 {
   display: flex;
   flex-direction: column;

@@ -7,6 +7,7 @@ const message = document.querySelector('#msg')
 const checkBox = document.querySelector('#consent')
 const success = document.querySelector('.msg-status')
 const sendBtn = document.querySelector('.btn')
+const changeText = document.querySelector('.change-text')
 
 const showError = (input, msg) => {
 	let errorMsg =
@@ -107,10 +108,12 @@ const checkInputs = () => {
 	}
 
 	if (isValid) {
-		success.style.display = 'block'
+		success.style.opacity = '1'
+		changeText.innerText = 'I hereby consent to being contacted by the team *'
 		setTimeout(() => {
-			success.style.display = 'none'
-		}, 3000)
+			success.style.opacity = '0'
+			changeText.innerText = 'I consent to being contacted by the team '
+		}, 5000)
 	}
 }
 

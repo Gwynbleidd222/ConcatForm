@@ -76,30 +76,27 @@ body {
 				.email-msg-error {
 					margin: 1rem 0 2rem;
 					color: $red;
-					font-size: 1.4rem;
 				}
 			}
 		}
 
 		.contact-form-middle {
-			p {
-				font-size: 1.4rem;
-			}
-
 			.query-error-msg {
 				color: $red;
 				margin: 1rem 0 2rem;
 			}
 			.query-box {
+				display: block;
 				padding: 1rem;
 				margin-top: 1rem;
 				width: 100%;
 				border-radius: 8px;
 				border: solid 1px $gray;
-				transition: border-color 1s;
+				transition: border-color, background-color 0.3s;
 
 				&:hover {
 					border-color: $darkGreen;
+					background-color: $green;
 				}
 
 				&:focus {
@@ -108,10 +105,16 @@ body {
 
 				input {
 					margin: 0 1rem;
-					&:checked {
-						background-color: $green;
-					}
+					cursor: pointer;
 				}
+
+				.contact-form-input:checked + .query-box {
+					background-color: $green;
+				}
+			}
+
+			.query-box input[type='radio']:checked {
+				accent-color: $darkGreen;
 			}
 		}
 
@@ -119,10 +122,6 @@ body {
 			.input-box-6 {
 				display: flex;
 				flex-direction: column;
-
-				.contact-form-label {
-					font-size: 1.4rem;
-				}
 
 				textarea.error {
 					border-color: $red;
@@ -162,7 +161,32 @@ body {
 
 				label {
 					padding-left: 1rem;
-					font-size: 1.4rem;
+				}
+
+				input[type='checkbox'] {
+					appearance: none;
+					width: 14px;
+					height: 14px;
+					border: none;
+					padding: 0.5em;
+					border: 1px black solid;
+					border-radius: 3px;
+					cursor: pointer;
+					position: relative;
+
+					&:checked {
+						background-color: $darkGreen;
+
+						&::before {
+							content: '✓';
+							color: white;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							font-size: 10px;
+						}
+					}
 				}
 			}
 
@@ -191,7 +215,6 @@ body {
 }
 
 .msg-status {
-	display: none;
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -201,6 +224,8 @@ body {
 	border-radius: 8px;
 	color: $white;
 	background-color: $darkGray;
+	opacity: 0;
+	transition: opacity 0.4s;
 	z-index: 10;
 
 	.status-box {
@@ -211,5 +236,55 @@ body {
 		img {
 			padding-right: 1rem;
 		}
+	}
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		max-width: 600px;
+		margin: 10rem auto;
+
+		h3 {
+			margin-bottom: 2rem;
+		}
+
+		.contact-form-top {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 8px;
+
+			.input-box-1,
+			.input-box-2 {
+				grid-column: auto;
+			}
+
+			.input-box-3 {
+				grid-column: 1 / -1;
+				width: 100%;
+			}
+		}
+
+		.contact-form-middle {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto 1fr;
+			gap: 12px;
+
+			p,
+			.contact-form-label,
+			label {
+				font-size: 1.6rem;
+			}
+
+			.concact-form-label {
+				grid-column: 1 / -1;
+				margin: 0;
+			}
+		}
+	}
+
+	.msg-status {
+		width: 500px;
 	}
 }
